@@ -34,4 +34,6 @@ public interface TicketServices {
 
 	public void deleteTicketById(int ticketId);
 
+	public List<Ticket> getTicketsByMovieId(int movieId);
+
 }

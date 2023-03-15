@@ -85,6 +85,18 @@ public class TicketController {
 
 	}
 
+	@GetMapping("/getTicketsByMovieId")
+	private List<Ticket> getTicketByMovieId(@RequestParam int movieId) {
+		// TODO Auto-generated method stub
+		List<Ticket> ticket = ticketServices.getTicketsByMovieId(movieId);
+
+		if (ticket.isEmpty())
+			throw new TicketNotFoundException("Ticket with ID:" + movieId + " does not exist.");
+
+		return ticket;
+
+	}
+
 	@GetMapping("/getTicketByIdPathVar/{ticketId}")
 	private Optional<Ticket> getTicketByIdPathVar(@PathVariable int ticketId) {
 		// TODO Auto-generated method stub
