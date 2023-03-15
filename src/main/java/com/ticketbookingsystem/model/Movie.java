@@ -39,7 +39,7 @@ public class Movie /* extends RepresentationModel<Movie> */ {
 	@Id
 	@Column(name = "movie_Id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int movieId;
+	private int id;
 
 	@Column(name = "movie_Name")
 	@NotNull(message = "Field can't be null")
@@ -96,11 +96,11 @@ public class Movie /* extends RepresentationModel<Movie> */ {
 	}
 
 	public int getMovieId() {
-		return movieId;
+		return id;
 	}
 
 	public void setMovieId(int movieId) {
-		this.movieId = movieId;
+		this.id = movieId;
 	}
 
 	public String getMovieName() {

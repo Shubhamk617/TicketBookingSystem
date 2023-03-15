@@ -3,6 +3,8 @@
  */
 package com.ticketbookingsystem.dao;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ticketbookingsystem.model.Ticket;
@@ -15,5 +17,7 @@ import com.ticketbookingsystem.model.Ticket;
  */
 
 public interface TicketRepository extends JpaRepository<Ticket, Integer> {
+
+	List<Ticket> findAllByMovieId(int movieId);
 
 }

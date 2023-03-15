@@ -68,4 +68,10 @@ public class TicketServicesImpl implements TicketServices {
 		return ticketRepository.saveAll(ticket);
 	}
 
+	@Override
+	public List<Ticket> getTicketsByMovieId(int movieId) {
+		// TODO Auto-generated method stub
+		return ticketRepository.findAllByMovieId(movieId);
+	}
+
 }
